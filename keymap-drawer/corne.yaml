@@ -69,7 +69,7 @@ layers:
   - ''
   - ''
   - $$mdi:apple-keyboard-control$$
-  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
@@ -105,8 +105,8 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:apple-keyboard-option$$', type: held}
+  - $$mdi:apple-keyboard-control$$
+  - {type: held}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - $$mdi:skip-forward$$
   - ''
   - {t: game, h: '$$mdi:toggle-switch$$'}
-  - {t: '$$mdi:apple-keyboard-control$$', type: held}
+  - {type: held}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
