@@ -69,7 +69,7 @@ layers:
   - ''
   - ''
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
@@ -105,7 +105,7 @@ layers:
   - ''
   - ''
   - ''
-  - $$mdi:apple-keyboard-control$$
+  - {t: ▽, type: trans}
   - {t: '$$mdi:apple-keyboard-option$$', type: held}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
@@ -119,7 +119,7 @@ layers:
   - ''
   - $$mdi:volume-plus$$
   - $$mdi:volume-minus$$
-  - $$mdi:arrow-up$$
+  - ''
   - ''
   - ''
   - F5
@@ -127,9 +127,9 @@ layers:
   - F7
   - F8
   - ''
-  - ''
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
+  - $$mdi:arrow-up$$
   - $$mdi:arrow-right$$
   - ''
   - F9
