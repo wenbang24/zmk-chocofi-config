@@ -20,7 +20,7 @@ layers:
   - '&hmr RSHIFT J'
   - '&hmr RGUI K'
   - '&hmr RALT L'
-  - '&hmr RCTRL SQT'
+  - '&hmr RCTRL SEMI'
   - Z
   - X
   - C
@@ -30,7 +30,7 @@ layers:
   - M
   - ','
   - .
-  - ;
+  - ''''
   - {t: Esc, h: fn}
   - {t: '$$mdi:keyboard-space$$', h: symbol}
   - ⮐
