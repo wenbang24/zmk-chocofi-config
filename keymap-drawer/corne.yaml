@@ -1,36 +1,36 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
   base:
-  - B
-  - L
-  - D
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '&hml LCTRL A'
+  - '&hml LALT S'
+  - '&hml LGUI D'
+  - '&hml LSHIFT F'
+  - G
+  - H
+  - '&hmr RSHIFT J'
+  - '&hmr RGUI K'
+  - '&hmr RALT L'
+  - '&hmr RCTRL SQT'
+  - Z
+  - X
   - C
   - V
-  - J
-  - Y
-  - O
-  - U
-  - ','
-  - '&hml LCTRL N'
-  - '&hml LALT R'
-  - '&hml LGUI T'
-  - '&hml LSHIFT S'
-  - G
-  - P
-  - '&hmr RSHIFT H'
-  - '&hmr RGUI A'
-  - '&hmr RALT E'
-  - '&hmr RCTRL I'
-  - X
-  - Q
+  - B
+  - N
   - M
-  - W
-  - Z
-  - K
-  - F
-  - ''''
-  - ;
+  - ','
   - .
+  - ;
   - {t: Esc, h: fn}
   - {t: '$$mdi:keyboard-space$$', h: symbol}
   - ⮐
@@ -117,8 +117,8 @@ layers:
   - F3
   - F4
   - ''
-  - $$mdi:volume-plus$$
   - $$mdi:volume-minus$$
+  - $$mdi:volume-plus$$
   - ''
   - ''
   - ''
