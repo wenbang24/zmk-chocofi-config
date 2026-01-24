@@ -85,9 +85,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       tapping-term-ms = <280>;
       quick-tap-ms = <QUICK_TAP_MS>; 
       bindings = <&kp>, <&kp>;
-      // label = "HOMEROW_MODS";
       #binding-cells = <2>;
-      // hold-trigger-key-positions = <TRIGGER_POS>;
       hold-trigger-on-release;
     };
   };
@@ -104,7 +102,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
               &kp Q       &kp W       &kp E      &kp R        &kp T          &kp Y       &kp U       &kp I       &kp O     &kp P
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼──────────┼───────────┼───────────┼───────────┤
         // │     A     │     S     │     D     │     F     │     G     │  │     H     │     J    │     K     │     L     │     ;     │
-        &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHIFT F  &kp G      &kp H     &hmr RSHIFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI
+        &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml_s LSHIFT F  &kp G      &kp H   &hmr_s RSHIFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼──────────┼───────────┼───────────┼───────────┤
         // │     Z     │     X     │     C     │     V     │     B     │  │     N     │     M    │     ,     │     .     │     '     │
                &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N      &kp M     &kp COMMA     &kp DOT    &kp SQT
