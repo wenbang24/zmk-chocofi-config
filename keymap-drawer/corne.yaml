@@ -182,6 +182,6 @@ layers:
   - Esc
   - $$mdi:keyboard-space$$
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
