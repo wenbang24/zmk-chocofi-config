@@ -14,10 +14,10 @@ layers:
   - '&hml LCTRL A'
   - '&hml LALT S'
   - '&hml LGUI D'
-  - '&hml_s LSHIFT F'
+  - '&hml LSHIFT F'
   - G
   - H
-  - '&hmr_s RSHIFT J'
+  - '&hmr RSHIFT J'
   - '&hmr RGUI K'
   - '&hmr RALT L'
   - '&hmr RCTRL SEMI'
