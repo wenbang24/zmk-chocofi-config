@@ -177,11 +177,48 @@ layers:
   - F3
   - ''
   - ''
-  - ''
+  - {t: bt, h: '$$mdi:toggle-switch$$'}
   - {t: game, h: '$$mdi:toggle-switch$$'}
   - Esc
   - $$mdi:keyboard-space$$
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  bt:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: base, h: '$$mdi:toggle-switch$$'}
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
