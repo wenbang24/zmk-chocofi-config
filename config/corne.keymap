@@ -9,8 +9,8 @@
 
 // global
 #define QUICK_TAP_MS 150
-#define TAPPING_TERM_MS 170
-#define PRIOR_IDLE_MS 100
+#define TAPPING_TERM_MS 200
+#define PRIOR_IDLE_MS 150
 
 // layers
 #define BASE 0
@@ -51,6 +51,17 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;
 )
 
+/* shift */
+ZMK_BEHAVIOR(shd, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <170>;
+    require-prior-idle-ms = <120>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    hold-trigger-on-release;
+)
+
 / {
   chosen {
     zmk,matrix_transform = &five_column_transform;
@@ -72,7 +83,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │  │     N     │     M    │     ,     │     .     │     '     │
                &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N      &kp M     &kp COMMA     &kp DOT    &kp SQT
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼──────────┼───────────┼───────────┼───────────╯
-                                     &lt FN ESC  &lt SYM SPACE  &kp RETURN  &kp TAB   &lt NUM SPACE  &kp BSPC 
+                                     &lt FN ESC &lt SYM SPACE &kp RETURN  &shd RSHIFT TAB &lt NUM SPACE  &kp BSPC 
         //                         │                                   │  │                                  │
         //                         ╰───────────────────────────────────╯  ╰──────────────────────────────────╯
       >;
