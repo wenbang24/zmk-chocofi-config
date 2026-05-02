@@ -34,7 +34,7 @@ layers:
   - {t: Esc, h: fn}
   - {t: '$$mdi:keyboard-space$$', h: symbol}
   - ⮐
-  - $$mdi:keyboard-tab$$
+  - '&shd RSHIFT TAB'
   - {t: '$$mdi:keyboard-space$$', h: number}
   - BSPC
   number:
