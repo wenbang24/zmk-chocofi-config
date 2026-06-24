@@ -70,7 +70,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
   behaviors {
         btclr_hold: btclr_hold {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             flavor = "hold-preferred";
             tapping-term-ms = <2000>;
             quick-tap-ms = <0>;
