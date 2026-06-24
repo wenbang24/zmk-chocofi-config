@@ -68,7 +68,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
   };
 
   behaviors {
-        btt: bt_tap {
+        btt: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
