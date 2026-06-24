@@ -24,7 +24,7 @@
 #define _LWIN_    &kp LEFT_WIN
 #define _RALT_    &kp RIGHT_ALT
 #define _SPC_     &kp SPACE
-#define _RET_     &kp RETURN 
+#define _RET_     &kp RETURN
 
 #define ___      &trans
 #define _x_      &none
@@ -68,13 +68,13 @@ ZMK_BEHAVIOR(shd, hold_tap,
   };
 
   behaviors {
-        btt: hold_tap {
+        btclr_hold: btclr_hold {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <2000>;
-            bindings = <&kp>, <&bt>;
-            display-name = "BT-Tap";
+            quick-tap-ms = <0>;
+            bindings = <&none>, <&bt>;
         };
     };
 };
@@ -82,7 +82,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
 / {
   keymap {
     compatible = "zmk,keymap";
-    base_layer { 
+    base_layer {
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮  ╭──────────────────────────────────────────────────────────╮
         // │     Q     │     W     │     E     │    R      │     T     │  │     Y     │     U    │     I     │     O     │     P     │
@@ -94,12 +94,12 @@ ZMK_BEHAVIOR(shd, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │  │     N     │     M    │     ,     │     .     │     '     │
                &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N      &kp M     &kp COMMA     &kp DOT    &kp SQT
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼──────────┼───────────┼───────────┼───────────╯
-                                     &lt FN ESC &lt SYM SPACE &kp RETURN  &shd RSHIFT TAB &lt NUM SPACE  &kp BSPC 
+                                     &lt FN ESC &lt SYM SPACE &kp RETURN  &shd RSHIFT TAB &lt NUM SPACE  &kp BSPC
         //                         │                                   │  │                                  │
         //                         ╰───────────────────────────────────╯  ╰──────────────────────────────────╯
       >;
     };
-    number_layer { 
+    number_layer {
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮  ╭───────────────────────────────────────────────────────────╮
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
@@ -111,7 +111,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
                 _x_        &kp N7      &kp N8      &kp N9      &kp N0          _x_         _x_         _x_         _x_         _x_
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                     &kp LCTRL    &kp LALT    &kp LGUI      &kp LSHIFT     ___         ___ 
+                                     &kp LCTRL    &kp LALT    &kp LGUI      &kp LSHIFT     ___         ___
         //                         │                                   │  │                                   │
         //                         ╰───────────────────────────────────╯  ╰───────────────────────────────────╯
       >;
@@ -128,12 +128,12 @@ ZMK_BEHAVIOR(shd, hold_tap,
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
                 _x_       &kp AMPS    &kp STAR    &kp LPAR    &kp RPAR         _x_         _x_         _x_         _x_         _x_
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                     &kp LCTRL      ___       &kp LGUI      &kp LSHIFT     ___         ___ 
+                                     &kp LCTRL      ___       &kp LGUI      &kp LSHIFT     ___         ___
         //                         │                                   │  │                                   │
         //                         ╰───────────────────────────────────╯  ╰───────────────────────────────────╯
       >;
     };
-    fn { 
+    fn {
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮  ╭───────────────────────────────────────────────────────────╮
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
@@ -145,24 +145,24 @@ ZMK_BEHAVIOR(shd, hold_tap,
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
               &kp F9      &kp F10     &kp F11     &kp F12       _x_        &kp C_PREV   &kp C_PP   &kp C_NEXT      _x_       &tog GM
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                        ___       &kp LALT    &kp LGUI      &kp LSHIFT     ___         ___ 
+                                        ___       &kp LALT    &kp LGUI      &kp LSHIFT     ___         ___
         //                         │                                   │  │                                   │
         //                         ╰───────────────────────────────────╯  ╰───────────────────────────────────╯
       >;
     };
-    game_layer { 
+    game_layer {
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮  ╭───────────────────────────────────────────────────────────╮
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
-               &kp N1      &kp N2      &kp N3      &kp N4      &kp N5         &kp N6      &kp N7      &kp N8      &kp N9      &kp N0 
+               &kp N1      &kp N2      &kp N3      &kp N4      &kp N5         &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
                &kp N6      &kp N7      &kp W       &kp N8      &kp N9         &kp Q        _x_         _x_         _x_         _x_
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
-            &kp LSHIFT     &kp A       &kp S       &kp D       &kp F           _x_         _x_         _x_    &btt R BT_CLR   &tog GM
+            &kp LSHIFT     &kp A       &kp S       &kp D       &kp F           _x_         _x_         _x_    &btclr_hold BT_CLR   &tog GM
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                      &kp ESC    &kp SPACE     &kp E         &kp TAB       ___         ___       
+                                      &kp ESC    &kp SPACE     &kp E         &kp TAB       ___         ___
         //                         │                                   │  │                                   │
         //                         ╰───────────────────────────────────╯  ╰───────────────────────────────────╯
       >;
