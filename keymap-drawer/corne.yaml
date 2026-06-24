@@ -159,12 +159,12 @@ layers:
   - '8'
   - '9'
   - '0'
-  - $$mdi:keyboard-tab$$
-  - Q
+  - '6'
+  - '7'
   - W
-  - E
-  - T
-  - ''
+  - '8'
+  - '9'
+  - Q
   - ''
   - ''
   - ''
@@ -174,14 +174,14 @@ layers:
   - S
   - D
   - F
-  - F3
   - ''
   - ''
-  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - ''
+  - '&btclr_hold 0 0'
   - {t: game, h: '$$mdi:toggle-switch$$'}
   - Esc
   - $$mdi:keyboard-space$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - E
+  - $$mdi:keyboard-tab$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
