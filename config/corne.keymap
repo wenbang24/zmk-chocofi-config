@@ -66,7 +66,13 @@ ZMK_BEHAVIOR(shd, hold_tap,
   chosen {
     zmk,matrix_transform = &five_column_transform;
   };
-
+  macros {
+        bt_clr_macro: bt_clr_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR>;
+        };
+    };
   behaviors {
         btclr_hold: btclr_hold {
             compatible = "zmk,behavior-hold-tap";
@@ -74,7 +80,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
             flavor = "hold-preferred";
             tapping-term-ms = <2000>;
             quick-tap-ms = <0>;
-            bindings = <&bt>, <&kp>;
+            bindings = <&bt_clr_macro>, <&none>;
         };
     };
 };
@@ -160,7 +166,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
                &kp N6      &kp N7      &kp W       &kp N8      &kp N9         &kp Q        _x_         _x_         _x_         _x_
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
-            &kp LSHIFT     &kp A       &kp S       &kp D       &kp F           _x_         _x_         _x_    &btclr_hold BT_CLR R   &tog GM
+            &kp LSHIFT     &kp A       &kp S       &kp D       &kp F           _x_         _x_         _x_    &btclr_hold 0 0   &tog GM
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼───────────┼───────────┼───────────┼───────────╯
                                       &kp ESC    &kp SPACE     &kp E         &kp TAB       ___         ___
         //                         │                                   │  │                                   │
