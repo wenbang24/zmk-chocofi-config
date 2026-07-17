@@ -73,7 +73,7 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
-  - {t: ▽, type: trans}
+  - {t: number, h: '$$mdi:toggle-switch$$'}
   symbol:
   - '~'
   - '!'
@@ -146,7 +146,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-control$$
   - {t: ▽, type: trans}
   game:
   - '1'
