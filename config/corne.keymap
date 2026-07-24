@@ -17,8 +17,8 @@
 #define NUM 1
 #define SYM 2
 #define FN 3
-#define GM 4
-#define BT 5
+#define WIN 4
+#define GM 5
 
 // redefined keycodes
 #define _LWIN_    &kp LEFT_WIN
@@ -83,6 +83,129 @@ ZMK_BEHAVIOR(shd, hold_tap,
             bindings = <&bt_clr_macro>, <&none>;
         };
     };
+  combos {
+    compatible = "zmk,combos";
+    combo_lc {
+      timeout-ms = <50>;
+      key-positions = <10 11>;
+      bindings = <&sk LCTRL>;
+      layers = <0>;
+    };
+    combo_la {
+      timeout-ms = <50>;
+      key-positions = <11 12>;
+      bindings = <&sk LALT>;
+      layers = <0>;
+    };
+    combo_lg {
+      timeout-ms = <50>;
+      key-positions = <12 13>;
+      bindings = <&sk LGUI>;
+      layers = <0>;
+    };
+    combo_ls {
+      timeout-ms = <50>;
+      key-positions = <13 14>;
+      bindings = <&sk LSHIFT>;
+      layers = <0>;
+    };
+    combo_rc {
+      timeout-ms = <50>;
+      key-positions = <19 18>;
+      bindings = <&sk RCTRL>;
+      layers = <0>;
+    };
+    combo_ra {
+      timeout-ms = <50>;
+      key-positions = <18 17>;
+      bindings = <&sk RALT>;
+      layers = <0>;
+    };
+    combo_rg {
+      timeout-ms = <50>;
+      key-positions = <17 16>;
+      bindings = <&sk RGUI>;
+      layers = <0>;
+    };
+    combo_rs {
+      timeout-ms = <50>;
+      key-positions = <16 15>;
+      bindings = <&sk RSHIFT>;
+      layers = <0>;
+    };
+    combo_lca {
+      timeout-ms = <50>;
+      key-positions = <10 11 12>;
+      bindings = <&sk LC(LALT)>;
+      layers = <0>;
+    };
+    combo_lag {
+      timeout-ms = <50>;
+      key-positions = <11 12 13>;
+      bindings = <&sk LA(LGUI)>;
+      layers = <0>;
+    };
+    combo_lgs {
+      timeout-ms = <50>;
+      key-positions = <12 13 14>;
+      bindings = <&sk LG(LSHIFT)>;
+      layers = <0>;
+    };
+    combo_lcag {
+      timeout-ms = <50>;
+      key-positions = <10 11 12 13>;
+      bindings = <&sk LC(LA(LGUI))>;
+      layers = <0>;
+    };
+    combo_lags {
+      timeout-ms = <50>;
+      key-positions = <11 12 13 14>;
+      bindings = <&sk LA(LG(LSHIFT))>;
+      layers = <0>;
+    };
+    combo_lcags {
+      timeout-ms = <50>;
+      key-positions = <10 11 12 13 14>;
+      bindings = <&sk LC(LA(LG(LSHIFT)))>;
+      layers = <0>;
+    };
+    combo_rca {
+      timeout-ms = <50>;
+      key-positions = <19 18 17>;
+      bindings = <&sk RC(RALT)>;
+      layers = <0>;
+    };
+    combo_rag {
+      timeout-ms = <50>;
+      key-positions = <18 17 16>;
+      bindings = <&sk RA(RGUI)>;
+      layers = <0>;
+    };
+    combo_rgs {
+      timeout-ms = <50>;
+      key-positions = <17 16 15>;
+      bindings = <&sk RG(RSHIFT)>;
+      layers = <0>;
+    };
+    combo_rcag {
+      timeout-ms = <50>;
+      key-positions = <19 18 17 16>;
+      bindings = <&sk RC(RA(RGUI))>;
+      layers = <0>;
+    };
+    combo_rags {
+      timeout-ms = <50>;
+      key-positions = <18 17 16 15>;
+      bindings = <&sk RA(RG(RSHIFT))>;
+      layers = <0>;
+    };
+    combo_rcags {
+      timeout-ms = <50>;
+      key-positions = <19 18 17 16 15>;
+      bindings = <&sk RC(RA(RG(RSHIFT)))>;
+      layers = <0>;
+    };
+  };
 };
 
 / {
@@ -92,15 +215,15 @@ ZMK_BEHAVIOR(shd, hold_tap,
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮  ╭──────────────────────────────────────────────────────────╮
         // │     Q     │     W     │     E     │    R      │     T     │  │     Y     │     U    │     I     │     O     │     P     │
-              &kp Q       &kp W       &kp E      &kp R        &kp T          &kp Y       &kp U       &kp I       &kp O     &kp P
+              &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U      &kp I       &kp O       &kp P
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼──────────┼───────────┼───────────┼───────────┤
         // │     A     │     S     │     D     │     F     │     G     │  │     H     │     J    │     K     │     L     │     ;     │
-        &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHIFT F    &kp G      &kp H   &hmr RSHIFT J   &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI
+              &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J      &kp K       &kp L      &kp SEMI
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼──────────┼───────────┼───────────┼───────────┤
         // │     Z     │     X     │     C     │     V     │     B     │  │     N     │     M    │     ,     │     .     │     '     │
-               &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N      &kp M     &kp COMMA     &kp DOT    &kp SQT
+              &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M    &kp COMMA     &kp DOT    &kp SQT
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼──────────┼───────────┼───────────┼───────────╯
-                                     &lt FN ESC &lt SYM SPACE &kp RETURN  &shd RSHIFT TAB &lt NUM SPACE  &kp BSPC
+                                  &lt FN ESC &lt SYM SPACE &lt WIN RETURN &shd RSHIFT TAB &lt NUM SPACE &kp BSPC
         //                         │                                   │  │                                  │
         //                         ╰───────────────────────────────────╯  ╰──────────────────────────────────╯
       >;
@@ -156,6 +279,23 @@ ZMK_BEHAVIOR(shd, hold_tap,
         //                         ╰───────────────────────────────────╯  ╰───────────────────────────────────╯
       >;
     };
+    win {
+      bindings = <
+        // ╭───────────────────────────────────────────────────────────╮  ╭───────────────────────────────────────────────────────────╮
+        // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
+          &kp LA(SLASH) &kp LA(N1)  &kp LA(N2)  &kp LA(N3) &kp LA(MINUS) &kp LA(LS(LEFT)) &kp LA(LS(DOWN)) &kp LA(LS(UP)) &kp LA(LS(RIGHT))  _x_
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
+                _x_      &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(EQUAL) &kp LA(LEFT) &kp LA(DOWN) &kp LA(UP) &kp LA(RIGHT)  _x_
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     _     │     _     │     _     │     _     │     _     │  │     _     │     _     │     _     │     _     │     _     │
+                _x_      &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)    &kp LA(LS(LC(LG(LEFT)))) &kp LA(LS(LC(LG(DOWN)))) &kp LA(LS(LC(LG(UP)))) &kp LA(LS(LC(LG(RIGHT))))  _x_
+        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼───────────┼───────────┼───────────┼───────────╯
+                                        _x_         _x_         _x_     &kp LS(LC(LGUI)) &kp LA(LS(TAB)) _x_
+        //                         │                                   │  │                                   │
+        //                         ╰───────────────────────────────────╯  ╰───────────────────────────────────╯
+      >;
+    }
     game_layer {
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮  ╭───────────────────────────────────────────────────────────╮
