@@ -29,37 +29,11 @@
 #define ___      &trans
 #define _x_      &none
 
-/* left-hand HRMs */
-ZMK_BEHAVIOR(hml, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    require-prior-idle-ms = <PRIOR_IDLE_MS>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
-    hold-trigger-on-release;
-)
-
-/* right-hand HRMs */
-ZMK_BEHAVIOR(hmr, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    require-prior-idle-ms = <PRIOR_IDLE_MS>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
-    hold-trigger-on-release;
-)
-
-/* shift */
-ZMK_BEHAVIOR(shd, hold_tap,
-    flavor = "balanced";
+/* modtap */
+ZMK_BEHAVIOR(md, hold_tap,
+    flavor = "hold-preferred";
     tapping-term-ms = <150>;
-    quick-tap-ms = <170>;
-    require-prior-idle-ms = <120>;
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
-    hold-trigger-on-release;
 )
 
 / {
@@ -223,7 +197,7 @@ ZMK_BEHAVIOR(shd, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │  │     N     │     M    │     ,     │     .     │     '     │
               &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M    &kp COMMA     &kp DOT    &kp SQT
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯  ╰───────────┼──────────┼───────────┼───────────┼───────────╯
-                                    &lt FN ESC &lt SYM TAB &lt WIN RETURN  &kp LSHIFT &lt NUM SPACE &kp BSPC
+                                    &lt FN ESC &lt SYM TAB &md LGUI RETURN  &kp LSHIFT &lt NUM SPACE &kp BSPC
         //                         │                                   │  │                                  │
         //                         ╰───────────────────────────────────╯  ╰──────────────────────────────────╯
       >;
