@@ -20,7 +20,7 @@ layers:
   - J
   - K
   - L
-  - ;
+  - '&md RCTRL SEMI'
   - Z
   - X
   - C
@@ -32,7 +32,7 @@ layers:
   - .
   - ''''
   - {t: Esc, h: fn}
-  - {t: '$$mdi:keyboard-tab$$', h: symbol}
+  - '&md LALT TAB'
   - '&md LGUI RETURN'
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-space$$', h: number}
@@ -106,7 +106,7 @@ layers:
   - ''
   - ''
   - $$mdi:apple-keyboard-control$$
-  - {type: held}
+  - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
