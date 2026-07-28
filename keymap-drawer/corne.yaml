@@ -33,7 +33,7 @@ layers:
   - ''''
   - {t: Esc, h: fn}
   - {t: '$$mdi:keyboard-tab$$', h: symbol}
-  - {t: ⮐, h: win}
+  - '&md LGUI RETURN'
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-space$$', h: number}
   - BSPC
@@ -148,43 +148,10 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - {t: ▽, type: trans}
-  win:
-  - Alt+/
-  - Alt+1
-  - Alt+2
-  - Alt+3
-  - Alt+-
-  - Alt+Sft+$$mdi:arrow-left$$
-  - Alt+Sft+$$mdi:arrow-down$$
-  - Alt+Sft+$$mdi:arrow-up$$
-  - Alt+Sft+$$mdi:arrow-right$$
-  - ''
-  - ''
-  - Alt+4
-  - Alt+5
-  - Alt+6
-  - Alt+=
-  - Alt+$$mdi:arrow-left$$
-  - Alt+$$mdi:arrow-down$$
-  - Alt+$$mdi:arrow-up$$
-  - Alt+$$mdi:arrow-right$$
-  - ''
-  - ''
-  - Alt+7
-  - Alt+8
-  - Alt+9
-  - Alt+0
-  - Hyper+$$mdi:arrow-left$$
-  - Hyper+$$mdi:arrow-down$$
-  - Hyper+$$mdi:arrow-up$$
-  - Hyper+$$mdi:arrow-right$$
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - Sft+Ctl+$$mdi:apple-keyboard-command$$
-  - Alt+Sft+$$mdi:keyboard-tab$$
-  - ''
+  win: [Alt+/, Alt+1, Alt+2, Alt+3, Alt+-, 'Alt+Sft+$$mdi:arrow-left$$', 'Alt+Sft+$$mdi:arrow-down$$', 'Alt+Sft+$$mdi:arrow-up$$', 'Alt+Sft+$$mdi:arrow-right$$',
+    '', '', Alt+4, Alt+5, Alt+6, Alt+=, 'Alt+$$mdi:arrow-left$$', 'Alt+$$mdi:arrow-down$$', 'Alt+$$mdi:arrow-up$$', 'Alt+$$mdi:arrow-right$$', '', '', Alt+7, Alt+8,
+    Alt+9, Alt+0, 'Hyper+$$mdi:arrow-left$$', 'Hyper+$$mdi:arrow-down$$', 'Hyper+$$mdi:arrow-up$$', 'Hyper+$$mdi:arrow-right$$', '', '', '', '', 'Sft+Ctl+$$mdi:apple-keyboard-command$$',
+    'Alt+Sft+$$mdi:keyboard-tab$$', '']
   game:
   - '1'
   - '2'
