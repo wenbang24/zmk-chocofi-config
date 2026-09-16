@@ -74,7 +74,7 @@ ZMK_BEHAVIOR(ld, hold_tap,
               &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U      &kp I       &kp O       &kp P
               &tp LSHFT A &tp LCTRL S &tp LALT D  &tp LGUI F  &kp G           &kp H       &tp RGUI J &tp RALT K  &tp RCTRL L &tp RSHFT SEMI
               &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M    &kp COMMA     &kp DOT    &kp SQT
-                                    &ld FN ESC    &ld NUM ENTER  _x_          _x_       &ld NUM SPACE &ld SYM BSPC
+                                    &hd LSHFT ESC    &ld NUM ENTER  _x_          _x_       &ld NUM SPACE &ld SYM BSPC
       >;
     };
     number_layer {
