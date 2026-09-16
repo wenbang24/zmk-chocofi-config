@@ -29,10 +29,10 @@ ZMK_BEHAVIOR(hd, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_BEHAVIOR(ld, layer_tap,
+ZMK_BEHAVIOR(ld, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&mo>, <&kp>;
 )
 
 / {
