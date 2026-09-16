@@ -62,7 +62,7 @@ ZMK_BEHAVIOR(ld, layer_tap,
       timeout-ms = <50>;
       key-positions = <31 34>;
       bindings = <&lt FN>;
-  }
+    };
   };
 };
 
