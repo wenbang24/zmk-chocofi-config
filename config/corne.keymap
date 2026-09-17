@@ -20,18 +20,22 @@
 ZMK_BEHAVIOR(tp, hold_tap,
     flavor = "tap-preferred";
     tapping-term-ms = <300>;
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
     bindings = <&kp>, <&kp>;
 )
 
 ZMK_BEHAVIOR(hd, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
     bindings = <&kp>, <&kp>;
 )
 
 ZMK_BEHAVIOR(ld, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
     bindings = <&mo>, <&kp>;
 )
 
