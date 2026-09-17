@@ -17,18 +17,15 @@
 #define ___      &trans
 #define _x_      &none
 
-ZMK_BEHAVIOR(tp, hold_tap,
-    flavor = "tap-preferred";
-    tapping-term-ms = <300>;
-    quick-tap-ms = <150>;
-    require-prior-idle-ms = <125>;
-    bindings = <&kp>, <&kp>;
-)
+&sk {
+    quick-release;
+};
 
 ZMK_BEHAVIOR(hd, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <150>;
     quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
     bindings = <&kp>, <&kp>;
 )
 
@@ -36,6 +33,7 @@ ZMK_BEHAVIOR(ld, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <150>;
     quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
     bindings = <&mo>, <&kp>;
 )
 
@@ -62,6 +60,55 @@ ZMK_BEHAVIOR(ld, hold_tap,
     };
   combos {
     compatible = "zmk,combos";
+    // Top/home row pairs: one-shot modifiers, mirrored on the base layer.
+    combo_ctrl_left {
+      timeout-ms = <50>;
+      key-positions = <0 10>; // Q + A
+      bindings = <&sk LCTRL>;
+      layers = <BASE>;
+    };
+    combo_alt_left {
+      timeout-ms = <50>;
+      key-positions = <1 11>; // W + S
+      bindings = <&sk LALT>;
+      layers = <BASE>;
+    };
+    combo_cmd_left {
+      timeout-ms = <50>;
+      key-positions = <2 12>; // E + D
+      bindings = <&sk LGUI>;
+      layers = <BASE>;
+    };
+    combo_shift_left {
+      timeout-ms = <50>;
+      key-positions = <3 13>; // R + F
+      bindings = <&sk LSHFT>;
+      layers = <BASE>;
+    };
+    combo_ctrl_right {
+      timeout-ms = <50>;
+      key-positions = <9 19>; // P + SEMI
+      bindings = <&sk RCTRL>;
+      layers = <BASE>;
+    };
+    combo_alt_right {
+      timeout-ms = <50>;
+      key-positions = <8 18>; // O + L
+      bindings = <&sk RALT>;
+      layers = <BASE>;
+    };
+    combo_cmd_right {
+      timeout-ms = <50>;
+      key-positions = <7 17>; // I + K
+      bindings = <&sk RGUI>;
+      layers = <BASE>;
+    };
+    combo_shift_right {
+      timeout-ms = <50>;
+      key-positions = <6 16>; // U + J
+      bindings = <&sk RSHFT>;
+      layers = <BASE>;
+    };
     combo_esc {
       timeout-ms = <50>;
       key-positions = <31 34>;
@@ -76,7 +123,7 @@ ZMK_BEHAVIOR(ld, hold_tap,
     base_layer {
       bindings = <
               &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U      &kp I       &kp O       &kp P
-              &tp LSHFT A &tp LCTRL S &tp LALT D  &tp LGUI F  &kp G           &kp H       &tp RGUI J &tp RALT K  &tp RCTRL L &tp RSHFT SEMI
+              &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J      &kp K       &kp L       &kp SEMI
               &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M    &kp COMMA     &kp DOT    &kp SQT
                                     &hd LSHFT ESC    &ld NUM ENTER  _x_          _x_       &ld NUM SPACE &ld SYM BSPC
       >;
