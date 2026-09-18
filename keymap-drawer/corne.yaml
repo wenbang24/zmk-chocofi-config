@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  base: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, ;, Z, X, C, V, B, N, M, ',', ., '''', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-shift$$',
-    number, '&ld 2 SPACE', '$$mdi:apple-keyboard-command$$', '$$mdi:apple-keyboard-control$$']
+  base: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, ;, Z, X, C, V, B, N, M, ',', ., '''', '$$mdi:apple-keyboard-control$$', '$$mdi:apple-keyboard-shift$$',
+    '&ld 1 SPACE', '&ld 2 SPACE', '$$mdi:apple-keyboard-command$$', '$$mdi:apple-keyboard-option$$']
   number:
   - '`'
   - '1'
@@ -35,7 +35,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
